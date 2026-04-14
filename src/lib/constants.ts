@@ -1,3 +1,5 @@
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/estetic-clinic" : "";
+
 export const SITE_METADATA = {
   title: "ד״ר חיים טל | קליניקה לאסתטיקה רפואית",
   description:
@@ -163,9 +165,9 @@ export interface GalleryItem {
 }
 
 export const GALLERY_ITEMS: readonly GalleryItem[] = [
-  { id: "1", category: "fillers", label: "עיצוב שפתיים", image: "/before-after-1.jpeg" },
-  { id: "2", category: "fillers", label: "עיצוב שפתיים", image: "/before-after-2.jpeg" },
-  { id: "3", category: "fillers", label: "עיצוב שפתיים", image: "/before-after-3.jpeg" },
+  { id: "1", category: "fillers", label: "עיצוב שפתיים", image: `${BASE_PATH}/before-after-1.jpeg` },
+  { id: "2", category: "fillers", label: "עיצוב שפתיים", image: `${BASE_PATH}/before-after-2.jpeg` },
+  { id: "3", category: "fillers", label: "עיצוב שפתיים", image: `${BASE_PATH}/before-after-3.jpeg` },
   { id: "4", category: "botox", label: "החלקת קמטים" },
   { id: "5", category: "dental", label: "עיצוב חיוך" },
   { id: "6", category: "skin", label: "חידוש העור" },
